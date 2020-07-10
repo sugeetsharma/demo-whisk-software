@@ -1,0 +1,9 @@
+<application>
+  <targetPlatform>
+    <version>server-10.10</version>
+    <packages/>
+  </targetPlatform>
+  <dependencies>
+    <string>nuxeo-web-ui:2.4.0</string>
+  </dependencies>
+</application>
