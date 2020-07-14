@@ -10,7 +10,7 @@
         padding: 5px;
       }
     </style>
-    <nuxeo-textarea role="widget" label="[[i18n('label.description')]]" name="description" value="{{document.properties.dc:description}}"></nuxeo-textarea>
+  
 
     <nuxeo-directory-suggestion role="widget" label="[[i18n('label.dublincore.nature')]]" name="nature" directory-name="nature" value="{{document.properties.dc:nature}}" placeholder="[[i18n('dublincoreEdit.directorySuggestion.placeholder')]]" min-chars="0"></nuxeo-directory-suggestion>
 
@@ -28,26 +28,26 @@
 
     <nuxeo-date-picker role="widget" value="{{document.properties.contract:reminder}}" label="Reminder"></nuxeo-date-picker>
 
-    
 
-<nuxeo-date-picker role="widget" value="{{document.properties.contract:start}}" label="Start"></nuxeo-date-picker><nuxeo-input role="widget" label="[[i18n('title')]]" name="title" value="{{document.properties.dc:title}}" autofocus="" required=""></nuxeo-input>
+
+    <nuxeo-date-picker role="widget" value="{{document.properties.contract:start}}" label="Start"></nuxeo-date-picker><nuxeo-input role="widget" label="[[i18n('title')]]" name="title" value="{{document.properties.dc:title}}" autofocus="" required=""></nuxeo-input>
 
   </template>
 
   <script>
-    Polymer({
-      is: 'nuxeo-contract-edit-layout',
-      behaviors: [Nuxeo.LayoutBehavior],
-      properties: {
+  Polymer({
+    is: 'nuxeo-contract-edit-layout',
+    behaviors: [Nuxeo.LayoutBehavior],
+    properties: {
 
-        /**
+      /**
          * @doctype Contract
          */
-        document: {
-          type: Object,
-        },
+      document: {
+        type: Object,
+      },
 
-      }
-    });
+    }
+  });
   </script>
 </dom-module>
