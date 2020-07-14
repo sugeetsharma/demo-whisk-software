@@ -11,33 +11,33 @@
       }
     </style>
     <div role="widget">
-      <label>[[i18n(&#x27;label.dublincore.title&#x27;)]]</label>
+      <label>[[i18n('label.dublincore.title')]]</label>
       <div name="title">[[document.properties.dc:title]]</div>
     </div>
 
     <div role="widget">
-      <label>[[i18n(&#x27;label.dublincore.description&#x27;)]]</label>
+      <label>[[i18n('label.dublincore.description')]]</label>
       <div name="description" class="multiline">[[document.properties.dc:description]]</div>
     </div>
 
     <div role="widget">
-      <label>[[i18n(&#x27;label.dublincore.nature&#x27;)]]</label>
+      <label>[[i18n('label.dublincore.nature')]]</label>
       <div name="nature">[[formatDirectory(document.properties.dc:nature)]]</div>
     </div>
 
-    <nuxeo-directory-suggestion role="widget" role="widget" label="[[i18n(&#x27;label.dublincore.subjects&#x27;)]]" directory-name="l10nsubjects" name="subjects" value="{{document.properties.dc:subjects}}" hidden$="[[!document.properties.dc:subjects.length]]" multiple="true" dbl10n="true" readonly=""></nuxeo-directory-suggestion>
+    <nuxeo-directory-suggestion role="widget" label="[[i18n('label.dublincore.subjects')]]" directory-name="l10nsubjects" name="subjects" value="{{document.properties.dc:subjects}}" hidden$="[[!document.properties.dc:subjects.length]]" multiple="true" dbl10n="true" readonly=""></nuxeo-directory-suggestion>
 
     <div role="widget">
-      <label>[[i18n(&#x27;label.dublincore.coverage&#x27;)]]</label>
+      <label>[[i18n('label.dublincore.coverage')]]</label>
       <div name="coverage">[[formatDirectory(document.properties.dc:coverage)]]</div>
     </div>
 
     <div role="widget">
-      <label>[[i18n(&#x27;label.dublincore.expire&#x27;)]]</label>
+      <label>[[i18n('label.dublincore.expire')]]</label>
       <nuxeo-date name="expired" datetime="[[document.properties.dc:expired]]"></nuxeo-date>
     </div>
 
-    <nuxeo-document-attachments role="widget" role="widget" document="[[document]]"></nuxeo-document-attachments>
+    <nuxeo-document-attachments role="widget" document="[[document]]"></nuxeo-document-attachments>
 
     <div role="widget">
       <label>End Date</label>
@@ -50,7 +50,7 @@
     </div>
 
     <div role="widget">
-      <label>Policy</label>
+      <label>New Policy </label>
       <div>[[document.properties.contract:policy]]</div>
     </div>
 
