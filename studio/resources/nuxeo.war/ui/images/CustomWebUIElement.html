@@ -1,0 +1,49 @@
+<!--
+`CustomWebUIElement`
+@group Nuxeo UI
+@element CustomWebUIElement
+-->
+<dom-module id="CustomWebUIElement">
+  <template>
+    <style>
+      *[role=widget] {
+        padding: 5px;
+      }
+    </style>
+
+    <paper-input id='title' role="widget" value="{{document.properties.dc:title}}" label="Title"></paper-input>
+
+    <paper-textarea id='description' role="widget" value="{{document.properties.dc:description}}" label="Description"></paper-textarea>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'CustomWebUIElement',
+      behaviors: [Nuxeo.LayoutBehavior],
+      properties: {
+        title: {
+          type: String,
+          value: 'Title'
+        },
+
+        //You can use either @schema or @doctype annotation in your model
+        /**
+         * @schema dublincore
+         */
+        document: {
+          type: Object
+        }
+      },
+
+      _title: function() {
+        return this.document.properties['dc:title'];
+      },
+
+      _setTitle: function() {
+        this.$.title.label = this._title;
+      }
+
+    });
+  </script>
+</dom-module>
