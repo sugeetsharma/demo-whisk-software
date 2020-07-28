@@ -12,25 +12,25 @@
     </style>
     <nuxeo-document-viewer role="widget" document="[[document]]"></nuxeo-document-viewer>
 
-<div role="widget"><label>Content</label><nuxeo-document-blob document="[[document]]" xpath="file:content" name="content"></nuxeo-document-blob>
-</div>
+    <div role="widget"><label>Content</label><nuxeo-document-blob document="[[document]]" xpath="file:content" name="content"></nuxeo-document-blob>
+    </div>
 
   </template>
 
   <script>
-    Polymer({
-      is: 'nuxeo-contractfeature-view-layout',
-      behaviors: [Nuxeo.LayoutBehavior],
-      properties: {
+  Polymer({
+    is: 'nuxeo-contractfeature-view-layout',
+    behaviors: [Nuxeo.LayoutBehavior],
+    properties: {
 
-        /**
+      /**
          * @doctype ContractFeature
          */
-        document: {
-          type: Object,
-        },
+      document: {
+        type: Object,
+      },
 
-      }
-    });
+    }
+  });
   </script>
 </dom-module>
