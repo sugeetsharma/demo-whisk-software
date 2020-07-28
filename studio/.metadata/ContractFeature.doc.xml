@@ -3,10 +3,52 @@
     <schema>
       <id>contractfeature</id>
       <prefix>contractfeature</prefix>
-      <fields class="linked-hash-map"/>
+      <fields class="linked-hash-map">
+        <entry>
+          <string>endDate</string>
+          <field>
+            <id>endDate</id>
+            <type>date</type>
+            <isMultiValue>false</isMultiValue>
+          </field>
+        </entry>
+        <entry>
+          <string>owner</string>
+          <field>
+            <id>owner</id>
+            <type>string</type>
+            <isMultiValue>false</isMultiValue>
+          </field>
+        </entry>
+        <entry>
+          <string>policy</string>
+          <field>
+            <id>policy</id>
+            <type>string</type>
+            <isMultiValue>false</isMultiValue>
+          </field>
+        </entry>
+        <entry>
+          <string>reminder</string>
+          <field>
+            <id>reminder</id>
+            <type>date</type>
+            <isMultiValue>false</isMultiValue>
+          </field>
+        </entry>
+        <entry>
+          <string>start</string>
+          <field>
+            <id>start</id>
+            <type>date</type>
+            <isMultiValue>false</isMultiValue>
+          </field>
+        </entry>
+      </fields>
     </schema>
     <label>Contract</label>
     <description>Contract document type for internal use.</description>
+    <SVGIcon>file.svg</SVGIcon>
     <layouts>
       <simple-layout>
         <mode>create</mode>
@@ -17,7 +59,7 @@
                 <type>text</type>
                 <label>Title</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>edit</string>
                     <map>
@@ -48,7 +90,7 @@
                 <type>textarea</type>
                 <label>Description</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>edit</string>
                     <map>
@@ -75,7 +117,7 @@
                 <type>text</type>
                 <label>WARNING</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>view</string>
                     <map>
@@ -105,7 +147,7 @@
                 <type>text</type>
                 <label>Title</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>edit</string>
                     <map>
@@ -136,7 +178,7 @@
                 <type>textarea</type>
                 <label>Description</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>edit</string>
                     <map>
@@ -163,7 +205,7 @@
                 <type>text</type>
                 <label>WARNING</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>view</string>
                     <map>
@@ -225,7 +267,7 @@
                 <type>text</type>
                 <label>WARNING</label>
                 <translated>false</translated>
-                <properties>
+                <properties class="linked-hash-map">
                   <entry>
                     <string>view</string>
                     <map>
@@ -258,11 +300,12 @@
       <id>ContractFeature</id>
       <parent>File</parent>
       <schemas/>
-      <facets class="linked-hash-set"/>
+      <facets/>
       <subtypes/>
       <actions/>
       <defaultView>view_documents</defaultView>
       <canOverrideType>false</canOverrideType>
+      <allowedAssetType>false</allowedAssetType>
     </doctype>
     <showCreateAction>false</showCreateAction>
     <showViewTab>false</showViewTab>
