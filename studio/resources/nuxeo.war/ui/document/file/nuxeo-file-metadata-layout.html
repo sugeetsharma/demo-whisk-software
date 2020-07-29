@@ -92,6 +92,12 @@ limitations under the License.
                      input="[[document]]"
                      params='{"target": "/default-domain/workspaces/Sample%20Content","name":"Winter.jpg"}'>
     </nuxeo-operation>
+
+    Copy this document: <paper-icon-button  id="btn"
+                                           icon="icons:content-copy"
+                                           on-tap="_copy">
+    </paper-icon-button>
+    <paper-tooltip for="btn">Execute copy</paper-tooltip>
     <!-- added for copy files from source to destination End -->
   </template>
 
