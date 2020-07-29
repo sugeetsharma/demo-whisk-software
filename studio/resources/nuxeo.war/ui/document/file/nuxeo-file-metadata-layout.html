@@ -85,20 +85,27 @@ limitations under the License.
     </div>
 
     <nuxeo-document-attachments role="widget" document="[[document]]"></nuxeo-document-attachments>
-
+    
+    <!-- added for copy files from source to destination Start --> 
+    <nuxeo-operation  id="copyOp"
+                  op="Document.Copy"
+                  input="[[document]]"
+                  params='{"target": "/default-domain/workspaces/target_folder","name":"target-document"}'>
+</nuxeo-operation>
+<!-- added for copy files from source to destination End -->
   </template>
 
   <script>
-    Polymer({
-      is: 'nuxeo-file-metadata-layout',
-      behaviors: [Nuxeo.LayoutBehavior],
-      properties: {
-        /**
+  Polymer({
+    is: 'nuxeo-file-metadata-layout',
+    behaviors: [Nuxeo.LayoutBehavior],
+    properties: {
+      /**
          * @doctype File
          */
-        document: Object
-      }
-    });
+      document: Object
+    }
+  });
   </script>
 
 </dom-module>
