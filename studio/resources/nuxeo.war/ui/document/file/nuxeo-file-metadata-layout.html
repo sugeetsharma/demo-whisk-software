@@ -115,7 +115,7 @@ limitations under the License.
     _copy: function() {
 
       this.$.copyOp.execute().then(function(result) {
-      this._toast("Document copied!");
+        this._toast("Document copied!");
 
       }.bind(this))
         .catch(function(error) {
@@ -138,7 +138,13 @@ limitations under the License.
       }.bind(this))
         .catch(function(error) {
         alert("Error when creating the copy:\n" + error);
-      }.bind(this))}
+      }.bind(this))},
+    
+    _toast: function(text) {
+        this.$.toast.hide();
+        this.$.toast.text = text;
+        this.$.toast.open();
+      }
   });
   </script>
 
